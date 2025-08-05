@@ -9,7 +9,7 @@
   "license": "MIT",
   "repository": "https://github.com/jennis-x/typejs",
   "bugs": "https://github.com/jennis-x/typejs/issues",
-  "homepage": "",
+  "homepage": "https://jennis-x.github.io/typejs/",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
