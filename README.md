@@ -1,11 +1,11 @@
-# @brick/typejs
+# @kuibu/typejs
 
 A lightweight front-end data type detection library.
 
 ## Installation
 
 ```powershell
-npm i @brick/typejs
+npm i @kuibu/typejs
 ```
 
 ## Usage
@@ -15,13 +15,13 @@ npm i @brick/typejs
 Using in commonjs projects:
 
 ```js
-const { isString } = require('@brick/typejs');
+const { isString } = require('@kuibu/typejs');
 ```
 
 Using in esmodule  projects:
 
 ```typescript
-import { isString } from '@brick/typejs';
+import { isString } from '@kuibu/typejs';
 ```
 
 ### bundleless
@@ -29,13 +29,13 @@ import { isString } from '@brick/typejs';
 Using in commonjs projects:
 
 ```js
-const isString = require('@brick/typejs/lib/isString');
+const isString = require('@kuibu/typejs/lib/isString');
 ```
 
 Using in esmodule  projects:
 
 ```typescript
-import isString from '@brick/typejs/es/isString';
+import isString from '@kuibu/typejs/es/isString';
 ```
 
 ## Example
@@ -43,7 +43,7 @@ import isString from '@brick/typejs/es/isString';
 ### isString
 
 ```typescript
-import { isString } from '@brick/typejs';
+import { isString } from '@kuibu/typejs';
 
 isString(''); // true
 isString(NaN); // false
@@ -59,7 +59,7 @@ isString(() => {}); // false
 ### isNumber
 
 ```typescript
-import { isNumber } from '@brick/typejs';
+import { isNumber } from '@kuibu/typejs';
 
 isNumber(''); // false
 isNumber(NaN); // true
@@ -75,7 +75,7 @@ isNumber(() => {}); // false
 ### isBoolean
 
 ```typescript
-import { isBoolean } from '@brick/typejs';
+import { isBoolean } from '@kuibu/typejs';
 
 isBoolean(''); // false
 isBoolean(NaN); // false
@@ -91,7 +91,7 @@ isBoolean(() => {}); // false
 ### isNull
 
 ```typescript
-import { isNull } from '@brick/typejs';
+import { isNull } from '@kuibu/typejs';
 
 isNull(''); // false
 isNull(NaN); // false
@@ -107,7 +107,7 @@ isNull(() => {}); // false
 ### isUndefined
 
 ```typescript
-import { isUndefined } from '@brick/typejs';
+import { isUndefined } from '@kuibu/typejs';
 
 isUndefined(''); // false
 isUndefined(NaN); // false
@@ -123,7 +123,7 @@ isUndefined(() => {}); // false
 ### isObject
 
 ```typescript
-import { isObject } from '@brick/typejs';
+import { isObject } from '@kuibu/typejs';
 
 isObject(''); // false
 isObject(NaN); // false
@@ -139,7 +139,7 @@ isObject(() => {}); // false
 ### isArray
 
 ```typescript
-import { isArray } from '@brick/typejs';
+import { isArray } from '@kuibu/typejs';
 
 isArray(''); // false
 isArray(NaN); // false
@@ -155,7 +155,7 @@ isArray(() => {}); // false
 ### isFunction
 
 ```typescript
-import { isFunction } from '@brick/typejs';
+import { isFunction } from '@kuibu/typejs';
 
 isFunction(''); // false
 isFunction(NaN); // false
@@ -171,7 +171,7 @@ isFunction(() => {}); // true
 ### isValidNumber
 
 ```typescript
-import { isValidNumber } from '@brick/typejs';
+import { isValidNumber } from '@kuibu/typejs';
 
 isValidNumber(''); // false
 isValidNumber(NaN); // false
@@ -187,7 +187,7 @@ isValidNumber(() => {}); // false
 ### isNonEmptyString
 
 ```typescript
-import { isNonEmptyString } from '@brick/typejs';
+import { isNonEmptyString } from '@kuibu/typejs';
 
 isNonEmptyString(''); // false
 isNonEmptyString('	'); // true
@@ -204,7 +204,7 @@ isNonEmptyString(() => {}); // false
 ### isNonEmptyObject
 
 ```typescript
-import { isNonEmptyObject } from '@brick/typejs';
+import { isNonEmptyObject } from '@kuibu/typejs';
 
 isNonEmptyObject(''); // false
 isNonEmptyObject(NaN); // false
@@ -221,7 +221,7 @@ isNonEmptyObject(() => {}); // false
 ### isNonEmptyArray
 
 ```typescript
-import { isNonEmptyArray } from '@brick/typejs';
+import { isNonEmptyArray } from '@kuibu/typejs';
 
 isNonEmptyArray(''); // false
 isNonEmptyArray(NaN); // false
@@ -238,7 +238,7 @@ isNonEmptyArray(() => {}); // false
 ### isEmpty
 
 ```typescript
-import { isEmpty } from '@brick/typejs';
+import { isEmpty } from '@kuibu/typejs';
 
 isEmpty(''); // true
 isEmpty(NaN); // true
@@ -262,6 +262,7 @@ class Other {
     }
 }
 
+import { isType } from '@kuibu/typejs';
 isType(new Other, 'Other'); // true
 ```
 
