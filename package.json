@@ -1,6 +1,6 @@
 {
   "name": "@kuibu/typejs",
-  "version": "1.0.0-rc.0",
+  "version": "1.0.0",
   "description": "A lightweight front-end data type detection library",
   "keywords": [
     "isType"
