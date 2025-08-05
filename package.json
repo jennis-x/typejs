@@ -1,0 +1,81 @@
+{
+  "name": "@brick/typejs",
+  "version": "1.0.0",
+  "description": "A lightweight front-end data type detection library",
+  "keywords": [
+    "isType"
+  ],
+  "author": "Jennis Wang",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "unpkg": "dist/index.umd.js",
+  "jsdelivr": "dist/index.umd.js",
+  "types": "dist/types/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "module": "./dist/index.mjs",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.cjs"
+    },
+    "./lib/*": {
+      "types": "./lib/types/utils/*.d.ts",
+      "require": "./lib/utils/*.cjs",
+      "default": "./lib/utils/*.cjs"
+    },
+    "./es/*": {
+      "types": "./es/types/utils/*.d.ts",
+      "module": "./es/utils/*.mjs",
+      "import": "./es/utils/*.mjs",
+      "default": "./es/utils/*.mjs"
+    }
+  },
+  "files": [
+    "dist",
+    "es",
+    "lib"
+  ],
+  "scripts": {
+    "build": "rollup -c --configPlugin typescript",
+    "watch": "rollup -c -w --configPlugin typescript",
+    "test": "jest",
+    "prepare": "husky install",
+    "commit": "git-cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "19.8.1",
+    "@commitlint/config-conventional": "19.8.1",
+    "@commitlint/types": "19.8.1",
+    "@rollup/plugin-terser": "0.4.4",
+    "@rollup/plugin-typescript": "12.1.4",
+    "@types/jest": "30.0.0",
+    "@typescript-eslint/eslint-plugin": "8.38.0",
+    "@typescript-eslint/parser": "8.38.0",
+    "commitizen": "4.3.1",
+    "conventional-changelog-cli": "5.0.0",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "8.57.1",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-prettier": "5.5.3",
+    "husky": "8.0.3",
+    "jest": "30.0.5",
+    "lint-staged": "15.5.2",
+    "prettier": "3.6.2",
+    "rollup": "4.46.2",
+    "rollup-plugin-clear": "2.0.7",
+    "ts-jest": "29.4.1",
+    "ts-node": "10.9.2",
+    "tslib": "2.8.1",
+    "typescript": "5.8.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
+}
